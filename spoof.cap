@@ -4,3 +4,4 @@ set arp.spoof.target 192.168.80.131
 arp.spoof on
 set net.sniff.local true
 net.sniff on
+sudo apt-get install ca-certificates libnetfilter-queue-dev libpcap unzip wget
