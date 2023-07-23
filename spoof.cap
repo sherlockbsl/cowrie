@@ -5,3 +5,4 @@ arp.spoof on
 set net.sniff.local true
 net.sniff on
 sudo apt-get install ca-certificates libnetfilter-queue-dev libpcap unzip wget
+run karne ki both spoof  ---    sudo ./bettercap -iface ens33 -caplet spoof.cap
