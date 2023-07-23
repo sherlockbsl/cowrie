@@ -1,0 +1,6 @@
+sudo apt-get install git python3-pip python3-setuptools
+git clone https://github.com/lanmaster53/recon-ng.git
+cd recon-ng/
+pip3 install -r REQUIREMENTS
+./recon-ng --version
+./recon-ng
