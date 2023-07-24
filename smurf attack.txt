@@ -1,0 +1,2 @@
+sudo apt-get install hping3
+hping3 --icmp -c 1 --spoof 192.168.0.201 192.168.0.255
