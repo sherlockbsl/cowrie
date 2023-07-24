@@ -1,0 +1,58 @@
+ 2  apt-get install -y apche2-utils apt-get install -y apache2-utils autoconf gcc libc6 libgd-dev make php python python3 tree unzip wget
+    3  sudo apt-get install -y apche2-utils apt-get install -y apache2-utils autoconf gcc libc6 libgd-dev make php python python3 tree unzip wget
+    4  sudo apt-get install -y apache2-utils autoconf gcc libc6 libgd-dev make php python python3 tree unzip wget
+    5  sudo mkdir tmp
+    6  ls -l
+    7  cd tmp
+    8  sudo wget http://192.168.1.251/sw/sec_tools/nagios/nagios-4.4.5.tar.gz
+    9  ls -l
+   10  sudo tar -zxf  nagios-4.4.5.tar.gz
+   11  ls -l
+   12  cd  nagios-4.4.5
+   13  ls -l /configure
+   14  ls -l ./configure
+   15  ip a
+   16  sudo ./configure --with-httpd-config=/etc/apapche2/sites-enabled/
+   17  sudo make all
+   18  sudo make install-groups-users
+   19  ps -aux |grep apache
+   20  ps -aux |grep apache2
+   21  sudo passwd nagios
+   22  sudo usermod -a -G nagios www-data
+   23  ls -l
+   24  ls -l /usr/local/nagios/bin
+   25  sudo make install
+   26  sudo make install-daemoninit
+   27  sudo make install-commandmode
+   28  ls -l /usr/local/nagios/
+   29  sudo make install-config
+   30  ls -l /usr/local/nagios/
+   31  tree /etc/apache2/sites-*
+   32  sudo make install-webconf
+   33  sudo a2enmod rewrite
+   34  sudo a2enmod cgi
+   35  sudo htpasswd -c /usr/local/nagios/etc/htpasswd.users nagiosadmin
+   36  sudo /usr/local/nagios/bin/nagios -v /usr/local/nagios/etc/nagios.cfg
+   37  sudo systemctl restart apache2
+   38  sudo systemctl start nagios
+
+install plugin
+
+   49  sudo apt-get install -y automake autotools-dev bc build-essential dc gawk gettext libmcrypt-dev libnet-snmp-perl libssl-dev snmp
+   50  sudo wget http://192.168.1.251/sw/sec_tools/nagios/nagios-plugins-release-2.2.1.tar.gz
+   51  ls -l
+   52  sudo tar -zxf  nagios-plugins-release-2.2.1.tar.gz
+   53  ls -l
+   54  ls -l /usr/local/nagios/libexec/
+   55  ls
+   56  cat readme
+   57  sudo ./tools/setup
+   58  ls -l
+   59  cd  nagios-plugins-release-2.2.1
+   60  cat readme
+   61  sudo ./tools/setup
+   62  ls
+   63  sudo ./configure
+   64  sudo make
+   65  sudo make install
+   66  ls -l /usr/local/nagios/libexec/
