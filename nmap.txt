@@ -1,0 +1,15 @@
+sudo apt-get install nmap 
+
+
+for n/w scannning use this command
+	nmap -sn 192.168.1.0/24
+for manual method dekhna hai konse ip pr konsa port chalu hai
+	ping 192.168.80.11(target ip)
+	apt-get install telnet
+	telnet 192.168.1.11 80
+for automated method 
+	sudo nmap 192.168.1.11
+	sudo nmap -sV 192.168.80.1 22
+for detect the os of target machine
+	nmap -O 192.168.1.22	
+	
