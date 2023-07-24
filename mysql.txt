@@ -1,0 +1,52 @@
+deb1: sudo apt-get install mariadb-server
+sudo -u root -p
+password:-123
+mysql>show databases;
+>create database mysql;
+>use mysql;
+ye cmd hai table create karne ki mera table user
+>create table user(id int(5) NOT NULL AUTO_INCREMENT,username varchar(30) NOT NULL,password varchar(32) NOT NULL,primary key (id),unique (username));
+ye table dekhne ki
+>desc user;
+>select * from user;
+ye table mein values put karne ki cmd
+>insert into user values(1,'tinku','tsharma@123');      
+>insert into user(2,'pinky','p@123');
+ye password update kara only id=2 wale ka
+>update user set password='gabbbar123' where id=2;
+ye cmd hai new column add karne ki jo ki fname
+>alter table user add column fname varchar(50);
+                  or
+>alter table user add column fname varchar(50) not after id;
+>desc user;
+ye cmd hai specific user ko delete karne ki 
+>delete from user where id-1;
+>select from user;
+ye cmd hai delete columd ki
+>alter table user drop column fname;
+>desc user;
+ye cmd hai delet table ki
+>drop table user;
+ye cmd hai delete database ki
+>drop database mysql;
+
+ye cmd hai backup ki
+deb1:-mkdir db_backup
+cd db_backup
+mysqldump --user root mysql > backup.sql
+   ask passwd for shuhari
+ls -l
+how to see delete database if i take backup
+create a empty database
+   >create database db1;
+>show databases;
+>use db1;
+>show tables;
+open duplicate m/c
+ls
+cd db_backup
+sudo mysql -u root -p db1 < backup.sql
+ ask for password 
+sudo  mysql -u root -p
+>use db1
+
