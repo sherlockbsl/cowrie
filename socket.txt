@@ -1,0 +1,17 @@
+deb1 >>> import socket
+     >>>tcpsocket=socket.socket(socket.AF_INET,socket.SOCK_STREAM)
+    >>>tcpsocket.bind(("0.0.0.0",8000))
+    >>>tcpsocket.listen()
+    >>>(clientsocket,(ip,port))=tcpsocket.accept() 
+
+deb2 :-apt-get install telnet
+        telnet ip of deb1 8000
+deb1: print(ip)
+      print(port)
+      clientsocket.send(b"\n python rock\n")
+         then go to client machine
+come deb1
+data=clientsocket.recv(2048)
+remove client
+clientsocket.close()
+tcpsocket.close()
