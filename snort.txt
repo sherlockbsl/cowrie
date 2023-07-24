@@ -1,0 +1,2 @@
+sudo nano /etc/rules/local.rules
+sudo snort -c /etc/snort/snort.conf -A console -i ens33
